@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block body %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
+
+  {% if uploaded_file_url %}
+<p>Uploaded!</p>
+  {% endif %}
+
+{% endblock %}

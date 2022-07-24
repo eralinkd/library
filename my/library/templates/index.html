@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lib
+{% endblock %}
+
+{% block body %}
+    <h1>Books</h1>
+
+    <ul>
+        {% for book in books %}
+            <li><a href="../media/{{ book }}" download="{{ book }}">{{ book }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
